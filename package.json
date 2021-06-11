@@ -1,0 +1,45 @@
+{
+  "name": "wysetax-app-api",
+  "version": "1.0.0",
+  "description": "WyseTax App API",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=multi-tenant&&nodemon ./index.js --exec babel-node -e js",
+    "lint": "npx eslint \"**/*.js\"",
+    "multi-tenant": "set NODE_ENV=multi-tenant&&nodemon ./index.js --exec babel-node -e js",
+    "debug": "node --nolazy --inspect-brk=9229 index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-plugin-inline-dotenv": "^1.5.0",
+    "bcrypt": "^4.0.1",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "circular-json": "^0.5.9",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "helmet": "^3.22.0",
+    "https": "^1.0.0",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7",
+    "nodemon": "^2.0.2",
+    "npm": "^7.7.4",
+    "query-string": "^7.0.0",
+    "request": "^2.88.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-mocha-no-only": "^1.1.1"
+  }
+}
