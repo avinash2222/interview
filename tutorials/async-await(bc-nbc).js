@@ -1,6 +1,7 @@
 import { User } from '../src/models/models'
 import fetch from 'node-fetch'
-console.log('async-await file started...')
+import 'colors'
+// console.log('async-await file started...')
 //----------------------1 async ----------------------------
 // let username= 'avinash2222'
 // setTimeout(() => console.log('hello'), 0) 

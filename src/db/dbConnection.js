@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import Promise from 'bluebird'
+import { logger } from '../utils/logger'
 
 const mongoOptions = {
   promiseLibrary: Promise,
@@ -27,13 +28,13 @@ export async function initClientDbConnection () {
   global.db = mongoose.connection
 
   global.db.on('open', () => {
-    console.info(`Mongoose connection open to DB_URL: ${JSON.stringify(process.env.DB_URL)}`)
+    logger.info(`Mongoose connection open to DB_URL: ${JSON.stringify(process.env.DB_URL)}`.blue)
   })
   global.db.on('connected', function () {
-    console.info(`MongoDB :: connected to DB_NAME: ${this.name}`)
+    logger.info(`MongoDB :: connected to DB_NAME: ${this.name}`.blue)
   })
   global.db.on('disconnected', function () {
-    console.info(`MongoDB :: disconnected ${this.name}`)
+    logger.info(`MongoDB :: disconnected ${this.name}`.red)
   })
   return global.db
 }

@@ -8,7 +8,10 @@ import cors from 'cors'
 import helmet from 'helmet'
 import {authenticate} from './src/security/auth'
 import path from 'path'
+import 'colors'
+import { logger } from './src/utils/logger'
 import './tutorials/async-await(bc-nbc)'
+import './tutorials/test'
 
 const app = express()
 const PORT = process.env.PORT || 8080
@@ -49,7 +52,7 @@ app.use(function (error, req, res, next) {
 })
 
 app.listen(PORT, () => {
-  console.log(`Node_ENV : ${process.env.NODE_ENV}`)
-  console.log(`Server is running on port ${PORT}`)
+  logger.info(`Node_ENV : ${process.env.NODE_ENV}`.blue)
+  logger.info(`Server is running on port ${PORT}`.blue)
 })
 
