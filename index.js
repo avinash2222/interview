@@ -8,6 +8,7 @@ import cors from 'cors'
 import helmet from 'helmet'
 import {authenticate} from './src/security/auth'
 import path from 'path'
+import './tutorials/async-await(bc-nbc)'
 
 const app = express()
 const PORT = process.env.PORT || 8080
@@ -19,13 +20,6 @@ const corsOptions = {
     callback(null, true)
   },
 }
-
-/* server page, general config */
-app.set('views', path.join(__dirname, './src/views'))
-app.set('view engine', 'ejs')
-
-/* joining public directory for testing socket*/
-app.use('/socket', express.static(path.join(__dirname, 'public')))
 
 app.use(cors(corsOptions))
 app.enable('trust proxy')

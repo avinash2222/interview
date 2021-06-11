@@ -38,4 +38,16 @@ export async function signup(req, res) {
   }
 }
 
+export async function test(req, res) {
+  try {
+  //@perform testing here
+
+
+
+    console.log({status: 'success', message: 'In test function...'})
+    res.status(200).send({status: 'success', message: 'In test function...'})
+  } catch (err) {
+    res.status(500).send(err)
+  }
+}
 
