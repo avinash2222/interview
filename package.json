@@ -10,6 +10,7 @@
     "debug": "node --nolazy --inspect-brk=9229 index.js"
   },
   "dependencies": {
+    "async": "^3.2.0",
     "axios": "^0.19.2",
     "babel-plugin-inline-dotenv": "^1.5.0",
     "bcrypt": "^4.0.1",
