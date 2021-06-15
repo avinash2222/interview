@@ -51,7 +51,7 @@ async.parallel([
       console.log('Task Two')
       callback(null, 2)
     }, 100)
-  }
+  },
 ],
 function(err, results) {
   console.log(results)
@@ -72,7 +72,7 @@ async.parallel({
       console.log('Task Two')
       callback(null, 2)
     }, 100)
-  }
+  },
 }, function(err, results) {
   console.log(results)
   // results now equals to: { task1: 1, task2: 2 }
@@ -91,7 +91,7 @@ async.series([
   function(callback) {
     console.log('three')
     callback(null, 3)
-  }
+  },
 ],
 function(err, results) {
   console.log(result)
@@ -116,7 +116,7 @@ async.series({
       console.log('Task 3')
       callback(null, 'three')
     }, 100)
-  }
+  },
 },
 function(err, results) {
   console.log(results)
