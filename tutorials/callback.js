@@ -1,6 +1,9 @@
 
 
-console.log('in tutorials callback file..'.red)
+console.log('in tutorials callback file..')
+//-----------------------------------------------
+
+
 function doHomework(subject, callback) {
   console.log(`Starting my ${subject} homework.`)
   callback()
