@@ -1,7 +1,10 @@
-import { User } from '../src/models/models'
-import fetch from 'node-fetch'
-import 'colors'
+// import { User } from '../src/models/models'
+// import fetch from 'node-fetch'
+// import 'colors'
+// import { resolve } from 'bluebird'
+// import { reject } from 'async'
 // console.log('async-await file started...')
+
 //----------------------1 async ----------------------------
 // let username= 'avinash2222'
 // setTimeout(() => console.log('hello'), 0) 
@@ -33,8 +36,74 @@ import 'colors'
 // }
 // syncFunction()
 // console.log('this is sync function___')
-//------------------------4 async------------------------------------------
+
+//------------------------5 async------------------------------------------
 // let hello = () => console.log('this is async code')
 // setTimeout(hello, 0)
 // console.log('this is not blocked..')
-//-------------------------------------------------------------------------
+
+//------------------------6 async------------------------------------------
+
+// function promiseFuncA() {
+//   const promiseA =  new Promise((resolve, reject) =>{
+//     resolve('promise A is resolved..')
+//   })
+//   return promiseA
+// }
+
+// function promiseFuncB() {
+//   const promiseB =  new Promise((resolve, reject) =>{
+//     resolve('promise B is resolved..')
+//   })
+//   return promiseB
+// }
+
+// async function main (){
+//   let promiseA = await promiseFuncA()
+//   let promiseB = await promiseFuncB()
+//   console.log(promiseA, promiseB)
+// }
+// main()
+// console.log('after main..')
+
+//----------------------7 async ---------------------------
+function promiseFuncA() {
+  return new Promise((resolve, reject) =>{
+    // resolve('promise A is resolved..')
+    reject('promise A is rejected..')
+  })
+}
+
+const promiseC = 42
+const promiseD = Promise.resolve('D is resolved')
+const promiseE = new Promise((resolve, reject) => {
+  setTimeout(()=>{
+    resolve('promise E is resolved')
+  }, 2000)
+})
+
+function promiseFuncB() {
+  return new Promise((resolve, reject) =>{
+    resolve('promise B is resolved..')
+  })
+}
+
+async function main(){
+  try {
+    // let promiseA = await promiseFuncA()
+    // let promiseB = await promiseFuncB()
+    // console.log(promiseA, promiseB)
+    Promise.all([promiseFuncA(), promiseFuncB(), promiseC, promiseD, promiseE]).then(data => {
+      console.log(data)
+    }).catch(err => {
+      console.log('then err:', err)
+    })
+  } catch(err) {
+    console.log('catch err:', err)
+  }
+}
+main()
+console.log('after main..')
+
+//----------------------------------------------------------
+

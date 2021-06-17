@@ -50,4 +50,17 @@ cbTest2((data)=> console.log('result2:', data))
 //   console.log('result2:', data)
 // }
 // cbTest2(cb)
-//------------------------------------------
+
+//------------------3 sample callback definition ------------------------
+const main = (callback) => {
+  let error = true
+  if (error) callback('Some error occured!', undefined)
+  else callback(undefined, {data: 'avinash'})
+}
+
+
+main((error, data) => {
+  console.log(error, data)
+})
+
+//----------------------------------
