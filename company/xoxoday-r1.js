@@ -1,4 +1,4 @@
-//index.js file
+/* index.js file */
 const express =  require('express')
 const {auth} = require('./auth')
 const userRoute = require('./route')
@@ -12,8 +12,8 @@ userRoute(app)
 
 app.listen(8080)
 
-//--------------------------------------------------------------------
-//route.js file
+/*--------------------------------------------------------------------*/
+/* route.js file */
 // module.exports = app => {
 //   app.get('/ping', (req,res) => res.send('I should be authorized'))
 // }
@@ -23,8 +23,9 @@ module.exports = app => {
     .route('/ping')
     .get((req,res) => res.send("I'm ping"))
 }
-//----------------------------------------------------------------------
-//auth.js file
+
+/*--------------------------------------------------------------------*/
+/* auth.js file */
 const auth = (req, res, next) => {
   res.send('not logged in')
 }
