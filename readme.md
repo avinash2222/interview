@@ -16,11 +16,37 @@
 https://docs.google.com/document/d/1pIC1aAfyXxc8F7-XUXC-fy42WSRI-pcXLZKlfZsRJRI/edit?usp=sharing
 
 
-- please give star if u found this repo helpful.
 
 
-* Resources:
+
+Resources:
+---
 ## Docker
 - https://docs.google.com/document/d/15itFousukBF8w2AbzLS5j3W2UKNtf2I-ghKco4CxaDY/edit?usp=sharing
 ## Socket
 - https://docs.google.com/document/d/1kh1RIIsGPdnH-GhJBFieAfyWaH0qVf9teJkYPNzewUo/edit?usp=sharing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- please give star if u found this repo helpful.
