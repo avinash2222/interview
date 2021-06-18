@@ -14,7 +14,7 @@ promFunc.then(async result => {
 }).catch(error => {
   console.log(error)
 })
-
+console.log('in the last')
 //------------------------------------------------
 
 

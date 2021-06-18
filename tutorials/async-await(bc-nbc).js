@@ -67,43 +67,43 @@
 // console.log('after main..')
 
 //----------------------7 async ---------------------------
-function promiseFuncA() {
-  return new Promise((resolve, reject) =>{
-    // resolve('promise A is resolved..')
-    reject('promise A is rejected..')
-  })
-}
+// function promiseFuncA() {
+//   return new Promise((resolve, reject) =>{
+//     // resolve('promise A is resolved..')
+//     reject('promise A is rejected..')
+//   })
+// }
 
-const promiseC = 42
-const promiseD = Promise.resolve('D is resolved')
-const promiseE = new Promise((resolve, reject) => {
-  setTimeout(()=>{
-    resolve('promise E is resolved')
-  }, 2000)
-})
+// const promiseC = 42
+// const promiseD = Promise.resolve('D is resolved')
+// const promiseE = new Promise((resolve, reject) => {
+//   setTimeout(()=>{
+//     resolve('promise E is resolved')
+//   }, 2000)
+// })
 
-function promiseFuncB() {
-  return new Promise((resolve, reject) =>{
-    resolve('promise B is resolved..')
-  })
-}
+// function promiseFuncB() {
+//   return new Promise((resolve, reject) =>{
+//     resolve('promise B is resolved..')
+//   })
+// }
 
-async function main(){
-  try {
-    // let promiseA = await promiseFuncA()
-    // let promiseB = await promiseFuncB()
-    // console.log(promiseA, promiseB)
-    Promise.all([promiseFuncA(), promiseFuncB(), promiseC, promiseD, promiseE]).then(data => {
-      console.log(data)
-    }).catch(err => {
-      console.log('then err:', err)
-    })
-  } catch(err) {
-    console.log('catch err:', err)
-  }
-}
-main()
-console.log('after main..')
+// async function main(){
+//   try {
+//     // let promiseA = await promiseFuncA()
+//     // let promiseB = await promiseFuncB()
+//     // console.log(promiseA, promiseB)
+//     Promise.all([promiseFuncA(), promiseFuncB(), promiseC, promiseD, promiseE]).then(data => {
+//       console.log(data)
+//     }).catch(err => {
+//       console.log('then err:', err)
+//     })
+//   } catch(err) {
+//     console.log('catch err:', err)
+//   }
+// }
+// main()
+// console.log('after main..')
 
 //----------------------------------------------------------
 
