@@ -12,7 +12,7 @@ import 'colors'
 import { logger } from './src/utils/logger'
 import './tutorials/async-await(bc-nbc)'
 import './tutorials/test'
-import './tutorials/callback'
+// import './tutorials/callback'
 import './test'
 
 const app = express()
