@@ -1,3 +1,14 @@
+//self invoking function 
+/*
+The self-invoking function only runs once.
+JavaScript supports nested functions. Nested functions have access to the scope "above" them.
+*/
+const add = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter;}
+})()
+
+
 //in closure
 
 const f2 = () => {
