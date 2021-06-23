@@ -69,4 +69,16 @@ let sampleOutput = '', count= 0
 Object.keys(dd)
 (4) ["xx", "A", "a", "bb"]
 
+
+new Map() is iteratable 
+let data = new Map()
+for (let [key, value] of data) {
+  console.log(key + ' = ' + value)
+}
+
+Object.keys(myObject).sort().map(function(key, index) {
+out = out+key+myObject[key]
+console.log(key, myObject[key])
+});
+
 */
