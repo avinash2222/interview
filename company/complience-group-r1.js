@@ -21,3 +21,5 @@
 //-------------------------------------------------
 // coding question
 // Check if a string can be formed from another string by at most X circular clockwise shifts
+
+//there was one more hard level coding question and some react code snippet
