@@ -5,6 +5,6 @@
   4. all keyword(tech) written asked by him
   5. authorization, authentication 
   6. jwt
-  7. 
+  7. forEach vs for loop
 
 */
