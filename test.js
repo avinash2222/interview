@@ -1,25 +1,15 @@
 
 
-let a = [2,5,6,[5,6,[5,6]],5,6,[5,6]]
+let a = [2,5,6,7]
 
-let p = []
-
-function flattenAndPush(subarray) { 
-  for (let item of subarray) {
-    if (typeof item === 'object') flattenAndPush(item)
-    else p.push(item)
+// let p = [2,6]
+const finterArray = () => {
+  let p = []
+  for(let i=0; i<a.length; i++){
+    if (a[i] %2==0) p.push(a[i])
   }
+  console.log(p)
 }
-
-flattenAndPush(a)
-// for (let item of a) {
-//   if (typeof item === 'object') flattenAndPush(item)
-//   else p.push(item)
-// }
-
-
-console.log(a)
-console.log(p)
-
+finterArray()
 
 
